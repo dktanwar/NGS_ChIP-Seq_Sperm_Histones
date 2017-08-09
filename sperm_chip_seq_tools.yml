@@ -10,7 +10,7 @@ tools:
   revisions:
   - b73962f8fcbf
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -29,7 +29,7 @@ tools:
   revisions:
   - fc288950c3b7
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -39,7 +39,7 @@ tools:
   revisions:
   - f5d67c722d67
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -49,7 +49,7 @@ tools:
   revisions:
   - 415a165d92bb
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -59,7 +59,7 @@ tools:
   revisions:
   - 9337dd1fbc66
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -78,7 +78,7 @@ tools:
   revisions:
   - 8ccbdbe9a695
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
@@ -88,5 +88,5 @@ tools:
   revisions:
   - e4d28c94242d
   tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: NGS ChIP-Seq Sperm Histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
