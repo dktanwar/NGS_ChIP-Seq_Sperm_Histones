@@ -1,0 +1,962 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "EpiSPermHis", 
+    "steps": {
+        "0": {
+            "annotation": "H3K4me3 targeted Sperm ChIP-Seq data", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "ChIP", 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 132.890625, 
+                "top": 472.08984375
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "3345ef74-426f-4f4f-882e-72c0af5375cc", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "Input/ genomic DNA (gDNA)", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Input", 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 127.96875, 
+                "top": 703.0859375
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "4cc21255-9db6-4d69-9f6f-99bcfc2db4ec", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.1.1", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FASTQ Groomer", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FASTQ Groomer", 
+            "outputs": [
+                {
+                    "name": "output_file", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 438.90625, 
+                "top": 471.09375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "71e5fa25b8a2", 
+                "name": "fastq_groomer", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input_type\": \"\\\"sanger\\\"\", \"__rerun_remap_job_id__\": null, \"options_type\": \"{\\\"__current_case__\\\": 0, \\\"options_type_selector\\\": \\\"basic\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.1.1", 
+            "type": "tool", 
+            "uuid": "ecb351c3-589c-427e-8f4e-9a06b7f8e862", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.1.1", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "input_file": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FASTQ Groomer", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FASTQ Groomer", 
+            "outputs": [
+                {
+                    "name": "output_file", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 432.94921875, 
+                "top": 699.1015625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "71e5fa25b8a2", 
+                "name": "fastq_groomer", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input_type\": \"\\\"sanger\\\"\", \"__rerun_remap_job_id__\": null, \"options_type\": \"{\\\"__current_case__\\\": 0, \\\"options_type_selector\\\": \\\"basic\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.1.1", 
+            "type": "tool", 
+            "uuid": "451e60a7-73e4-4c67-978e-6aba98790d60", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "Quality Check pre-processing", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input_file": {
+                    "id": 2, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "contaminants"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "limits"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 724.94140625, 
+                "top": 136.09375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "tool_shed_repository": {
+                "changeset_revision": "9337dd1fbc66", 
+                "name": "fastqc", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"contaminants\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"limits\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "0.69", 
+            "type": "tool", 
+            "uuid": "40b51195-9a55-4b22-9bcc-818e7f9c2cf6", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "Trim adaptor sequences, Trailing 'N', sequenced reads", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "readtype|fastq_in": {
+                    "id": 2, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "readtype"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 758.92578125, 
+                "top": 366.09375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "tool_shed_repository": {
+                "changeset_revision": "53af7b5b1b56", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"name\\\": \\\"MINLEN\\\", \\\"__current_case__\\\": 1, \\\"minlen\\\": \\\"80\\\"}}, {\\\"__index__\\\": 1, \\\"operation\\\": {\\\"trailing\\\": \\\"30\\\", \\\"name\\\": \\\"TRAILING\\\", \\\"__current_case__\\\": 3}}]\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"readtype\": \"{\\\"single_or_paired\\\": \\\"se\\\", \\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"seed_mismatches\\\": \\\"2\\\", \\\"simple_clip_threshold\\\": \\\"15\\\", \\\"min_adapter_len\\\": \\\"8\\\", \\\"adapter_type\\\": {\\\"adapter_fasta\\\": \\\"TruSeq3-SE.fa\\\", \\\"__current_case__\\\": 0, \\\"standard_or_custom\\\": \\\"standard\\\"}, \\\"keep_both_reads\\\": \\\"true\\\", \\\"__current_case__\\\": 0, \\\"palindrome_clip_threshold\\\": \\\"30\\\", \\\"do_illuminaclip\\\": \\\"true\\\"}\"}", 
+            "tool_version": "0.36.4", 
+            "type": "tool", 
+            "uuid": "10c1cd04-fb65-49c8-a88c-0c841543723c", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "Trim adaptor sequences, Trailing 'N', sequenced reads", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "readtype|fastq_in": {
+                    "id": 3, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "readtype"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 761.97265625, 
+                "top": 701.1328125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "tool_shed_repository": {
+                "changeset_revision": "53af7b5b1b56", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"name\\\": \\\"MINLEN\\\", \\\"__current_case__\\\": 1, \\\"minlen\\\": \\\"80\\\"}}, {\\\"__index__\\\": 1, \\\"operation\\\": {\\\"trailing\\\": \\\"30\\\", \\\"name\\\": \\\"TRAILING\\\", \\\"__current_case__\\\": 3}}]\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"readtype\": \"{\\\"single_or_paired\\\": \\\"se\\\", \\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"seed_mismatches\\\": \\\"2\\\", \\\"simple_clip_threshold\\\": \\\"15\\\", \\\"min_adapter_len\\\": \\\"8\\\", \\\"adapter_type\\\": {\\\"adapter_fasta\\\": \\\"TruSeq3-SE.fa\\\", \\\"__current_case__\\\": 0, \\\"standard_or_custom\\\": \\\"standard\\\"}, \\\"keep_both_reads\\\": \\\"true\\\", \\\"__current_case__\\\": 0, \\\"palindrome_clip_threshold\\\": \\\"30\\\", \\\"do_illuminaclip\\\": \\\"true\\\"}\"}", 
+            "tool_version": "0.36.4", 
+            "type": "tool", 
+            "uuid": "99c8dd70-5b58-4028-9009-8c38a86d3556", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "Quality Check pre-processing", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "input_file": {
+                    "id": 3, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "contaminants"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "limits"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 718.92578125, 
+                "top": 1030.09765625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "tool_shed_repository": {
+                "changeset_revision": "9337dd1fbc66", 
+                "name": "fastqc", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"contaminants\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"limits\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "0.69", 
+            "type": "tool", 
+            "uuid": "07f8c96d-9402-4db0-a076-5d9f99394965", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "Alignment of trimmed reads with Bowtie2", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "library|input_1": {
+                    "id": 5, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Bowtie2", 
+                    "name": "library"
+                }
+            ], 
+            "label": null, 
+            "name": "Bowtie2", 
+            "outputs": [
+                {
+                    "name": "output_unaligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_unaligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_sam", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "mapping_stats", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1003.9453125, 
+                "top": 334.1015625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "8ccbdbe9a695", 
+                "name": "bowtie2", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"aligned_file\\\": \\\"false\\\", \\\"unaligned_file\\\": \\\"false\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"reference_genome\": \"{\\\"source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0, \\\"index\\\": \\\"hg19\\\"}\", \"rg\": \"{\\\"rg_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 3}\", \"save_mapping_stats\": \"\\\"false\\\"\", \"analysis_type\": \"{\\\"alignment_options\\\": {\\\"__current_case__\\\": 1, \\\"alignment_options_selector\\\": \\\"no\\\"}, \\\"effort_options\\\": {\\\"effort_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"sam_options\\\": {\\\"sam_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"other_options\\\": {\\\"other_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"scoring_options\\\": {\\\"scoring_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"analysis_type_selector\\\": \\\"full\\\", \\\"reporting_options\\\": {\\\"reporting_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"sam_opt\\\": \\\"true\\\", \\\"input_options\\\": {\\\"input_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}}\"}", 
+            "tool_version": "2.3.2.2", 
+            "type": "tool", 
+            "uuid": "68ee11ba-d349-4363-8b4a-d2d4819604ab", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "Alignment of trimmed reads with Bowtie2", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "library|input_1": {
+                    "id": 6, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Bowtie2", 
+                    "name": "library"
+                }
+            ], 
+            "label": null, 
+            "name": "Bowtie2", 
+            "outputs": [
+                {
+                    "name": "output_unaligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_unaligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_sam", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "mapping_stats", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1012.94921875, 
+                "top": 704.12109375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "8ccbdbe9a695", 
+                "name": "bowtie2", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"aligned_file\\\": \\\"false\\\", \\\"unaligned_file\\\": \\\"false\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"reference_genome\": \"{\\\"source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0, \\\"index\\\": \\\"hg19\\\"}\", \"rg\": \"{\\\"rg_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 3}\", \"save_mapping_stats\": \"\\\"false\\\"\", \"analysis_type\": \"{\\\"alignment_options\\\": {\\\"__current_case__\\\": 1, \\\"alignment_options_selector\\\": \\\"no\\\"}, \\\"effort_options\\\": {\\\"effort_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"sam_options\\\": {\\\"sam_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"other_options\\\": {\\\"other_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"scoring_options\\\": {\\\"scoring_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"analysis_type_selector\\\": \\\"full\\\", \\\"reporting_options\\\": {\\\"reporting_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"sam_opt\\\": \\\"true\\\", \\\"input_options\\\": {\\\"input_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}}\"}", 
+            "tool_version": "2.3.2.2", 
+            "type": "tool", 
+            "uuid": "9d63c2fb-79b7-438c-917e-7caf36a9b1f6", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "Remove sequenced reads with SNPs/ mismatches", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dktanwar/removesnp/RemoveSNPs/0.1.0", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "SAM_files": {
+                    "id": 8, 
+                    "output_name": "output_sam"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Remove Mismatches (SNPs) from SAM Alignment file", 
+                    "name": "SAM_files"
+                }
+            ], 
+            "label": null, 
+            "name": "Remove Mismatches (SNPs) from SAM Alignment file", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 1313.96484375, 
+                "top": 556.11328125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dktanwar/removesnp/RemoveSNPs/0.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "cd9c123ab04f", 
+                "name": "removesnp", 
+                "owner": "dktanwar", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"SNPs_allowed\": \"\\\"3\\\"\", \"__rerun_remap_job_id__\": null, \"SAM_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "91c15237-b4d0-415f-98c0-0571ecacbe3a", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "Remove sequenced reads with SNPs/ mismatches", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dktanwar/removesnp/RemoveSNPs/0.1.0", 
+            "errors": null, 
+            "id": 11, 
+            "input_connections": {
+                "SAM_files": {
+                    "id": 9, 
+                    "output_name": "output_sam"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Remove Mismatches (SNPs) from SAM Alignment file", 
+                    "name": "SAM_files"
+                }
+            ], 
+            "label": null, 
+            "name": "Remove Mismatches (SNPs) from SAM Alignment file", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 1317.96875, 
+                "top": 702.109375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dktanwar/removesnp/RemoveSNPs/0.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "cd9c123ab04f", 
+                "name": "removesnp", 
+                "owner": "dktanwar", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"SNPs_allowed\": \"\\\"3\\\"\", \"__rerun_remap_job_id__\": null, \"SAM_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "b235dbaf-4062-4840-ad6b-36608b5eef31", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "Conversion of SAM file to BAM file after removal of sequenced reads with mismatches.", 
+            "content_id": "CONVERTER_sam_to_bam", 
+            "errors": null, 
+            "id": 12, 
+            "input_connections": {
+                "input1": {
+                    "id": 10, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Convert SAM to BAM", 
+                    "name": "input1"
+                }
+            ], 
+            "label": null, 
+            "name": "Convert SAM to BAM", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1635.95703125, 
+                "top": 569.12109375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "CONVERTER_sam_to_bam", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "uuid": "aade2a91-f09a-482c-8047-e3436b6d2ab4", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "Conversion of SAM file to BAM file after removal of sequenced reads with mismatches.", 
+            "content_id": "CONVERTER_sam_to_bam", 
+            "errors": null, 
+            "id": 13, 
+            "input_connections": {
+                "input1": {
+                    "id": 11, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Convert SAM to BAM", 
+                    "name": "input1"
+                }
+            ], 
+            "label": null, 
+            "name": "Convert SAM to BAM", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1640.9765625, 
+                "top": 707.109375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "CONVERTER_sam_to_bam", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "uuid": "3e2564aa-a948-4e8f-8a9d-baed893c9bc1", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "Quality Check post-processing", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "errors": null, 
+            "id": 14, 
+            "input_connections": {
+                "input_file": {
+                    "id": 12, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "contaminants"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "limits"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1886.953125, 
+                "top": 309.1015625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "tool_shed_repository": {
+                "changeset_revision": "9337dd1fbc66", 
+                "name": "fastqc", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"contaminants\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"limits\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "0.69", 
+            "type": "tool", 
+            "uuid": "f5cbad4a-3102-4eb4-aadd-839db7db82ca", 
+            "workflow_outputs": []
+        }, 
+        "15": {
+            "annotation": "Mark the sequenced reads which are present as duplicates", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "errors": null, 
+            "id": 15, 
+            "input_connections": {
+                "inputFile": {
+                    "id": 12, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MarkDuplicates", 
+                    "name": "inputFile"
+                }
+            ], 
+            "label": null, 
+            "name": "MarkDuplicates", 
+            "outputs": [
+                {
+                    "name": "metrics_file", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outFile", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1885.95703125, 
+                "top": 525.05859375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "fc288950c3b7", 
+                "name": "picard", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"duplicate_scoring_strategy\": \"\\\"SUM_OF_BASE_QUALITIES\\\"\", \"remove_duplicates\": \"\\\"false\\\"\", \"read_name_regex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*.\\\"\", \"barcode_tag\": \"\\\"\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"validation_stringency\": \"\\\"LENIENT\\\"\", \"comments\": \"[]\", \"assume_sorted\": \"\\\"false\\\"\", \"optical_duplicate_pixel_distance\": \"\\\"100\\\"\", \"inputFile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.7.1.1", 
+            "type": "tool", 
+            "uuid": "35c364c7-2e42-4b12-ac57-93413968a364", 
+            "workflow_outputs": []
+        }, 
+        "16": {
+            "annotation": "Mark the sequenced reads which are present as duplicates", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "errors": null, 
+            "id": 16, 
+            "input_connections": {
+                "inputFile": {
+                    "id": 13, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MarkDuplicates", 
+                    "name": "inputFile"
+                }
+            ], 
+            "label": null, 
+            "name": "MarkDuplicates", 
+            "outputs": [
+                {
+                    "name": "metrics_file", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outFile", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1889.98046875, 
+                "top": 715.1171875
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "fc288950c3b7", 
+                "name": "picard", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"duplicate_scoring_strategy\": \"\\\"SUM_OF_BASE_QUALITIES\\\"\", \"remove_duplicates\": \"\\\"false\\\"\", \"read_name_regex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*.\\\"\", \"barcode_tag\": \"\\\"\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"validation_stringency\": \"\\\"LENIENT\\\"\", \"comments\": \"[]\", \"assume_sorted\": \"\\\"false\\\"\", \"optical_duplicate_pixel_distance\": \"\\\"100\\\"\", \"inputFile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.7.1.1", 
+            "type": "tool", 
+            "uuid": "ab434b4f-099c-4d63-9e80-bd90b46dc190", 
+            "workflow_outputs": []
+        }, 
+        "17": {
+            "annotation": "Quality Check post-processing", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "errors": null, 
+            "id": 17, 
+            "input_connections": {
+                "input_file": {
+                    "id": 13, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "contaminants"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "limits"
+                }, 
+                {
+                    "description": "runtime parameter for tool FastQC", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1892.96875, 
+                "top": 886.1328125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69", 
+            "tool_shed_repository": {
+                "changeset_revision": "9337dd1fbc66", 
+                "name": "fastqc", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"contaminants\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"limits\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "0.69", 
+            "type": "tool", 
+            "uuid": "1c2325c8-3c10-4ba8-b353-9b3208d7ca82", 
+            "workflow_outputs": []
+        }, 
+        "18": {
+            "annotation": "Peak calling with MACS2 using `--broad` parameters and `--broad-cutoff` with 0.000001", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0", 
+            "errors": null, 
+            "id": 18, 
+            "input_connections": {
+                "input_control_file": {
+                    "id": 16, 
+                    "output_name": "outFile"
+                }, 
+                "input_treatment_file": {
+                    "id": 15, 
+                    "output_name": "outFile"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MACS2 callpeak", 
+                    "name": "input_control_file"
+                }, 
+                {
+                    "description": "runtime parameter for tool MACS2 callpeak", 
+                    "name": "input_treatment_file"
+                }
+            ], 
+            "label": null, 
+            "name": "MACS2 callpeak", 
+            "outputs": [
+                {
+                    "name": "output_tabular", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_broadpeaks", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_gappedpeaks", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_narrowpeaks", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_summits", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_plot", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "output_treat_pileup", 
+                    "type": "bedgraph"
+                }, 
+                {
+                    "name": "output_control_lambda", 
+                    "type": "bedgraph"
+                }, 
+                {
+                    "name": "output_extra_files", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 2228.984375, 
+                "top": 530.09765625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f5d67c722d67", 
+                "name": "macs2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"effective_genome_size_options\": \"{\\\"effective_genome_size_options_selector\\\": \\\"2451960000\\\", \\\"__current_case__\\\": 0}\", \"bampe\": \"\\\"false\\\"\", \"input_control_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"band_width\": \"\\\"300\\\"\", \"cutoff_options\": \"{\\\"cutoff_options_selector\\\": \\\"qvalue\\\", \\\"qvalue\\\": \\\"0.05\\\", \\\"__current_case__\\\": 1}\", \"advanced_options\": \"{\\\"advanced_options_selector\\\": \\\"on\\\", \\\"ratio\\\": \\\"1.0\\\", \\\"to_large\\\": \\\"false\\\", \\\"slocal\\\": \\\"1000\\\", \\\"broad_options\\\": {\\\"broad_cutoff\\\": \\\"1e-06\\\", \\\"broad_options_selector\\\": \\\"broad\\\", \\\"__current_case__\\\": 0}, \\\"nolambda\\\": \\\"false\\\", \\\"llocal\\\": \\\"10000\\\", \\\"keep_dup_options\\\": {\\\"__current_case__\\\": 1, \\\"keep_dup_options_selector\\\": \\\"1\\\"}, \\\"__current_case__\\\": 0}\", \"input_treatment_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"nomodel_type\": \"{\\\"nomodel_type_selector\\\": \\\"nomodel\\\", \\\"extsize\\\": \\\"200\\\", \\\"__current_case__\\\": 1, \\\"shift\\\": \\\"0\\\"}\", \"mfold\": \"{\\\"upper\\\": \\\"50\\\", \\\"lower\\\": \\\"5\\\"}\", \"outputs\": \"[\\\"peaks_tabular\\\", \\\"summits\\\", \\\"bdg\\\"]\"}", 
+            "tool_version": "2.1.1.20160309.0", 
+            "type": "tool", 
+            "uuid": "b32ffa1b-d31d-4bb1-8c9b-3420e02d5393", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "fb7497e4-e5df-4ea4-963b-5dbfb6b882b9"
+}
