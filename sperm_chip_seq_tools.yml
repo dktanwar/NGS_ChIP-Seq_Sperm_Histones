@@ -44,6 +44,17 @@ tools:
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
+  name: macs2
+  owner: iuc
+  revisions:
+  - f5d67c722d67
+#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
+  
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
   name: deeptools_plot_coverage
   owner: bgruening
   revisions:
@@ -114,17 +125,6 @@ tools:
   owner: bgruening
   revisions:
   - f264afa9fa6f
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
-  tool_shed_url: toolshed.g2.bx.psu.edu
-
-- install_repository_dependencies: true
-  install_resolver_dependencies: true
-  install_tool_dependencies: true
-  name: macs2
-  owner: iuc
-  revisions:
-  - f5d67c722d67
 #  tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
