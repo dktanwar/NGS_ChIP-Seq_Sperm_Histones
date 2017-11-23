@@ -1,6 +1,6 @@
 # Galaxy - Sperm ChIP-Seq flavoured Galaxy
 #
-# VERSION       0.1
+# VERSION       0.2
 
 FROM bgruening/galaxy-stable
 
