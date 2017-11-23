@@ -39,19 +39,7 @@
 api_key: admin
 galaxy_instance: http://localhost:8080
 
-
 tools:
-- install_repository_dependencies: true
-  install_resolver_dependencies: true
-  install_tool_dependencies: true
-  name: macs2
-  owner: iuc
-  revisions:
-  - f5d67c722d67
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
-  tool_shed_url: toolshed.g2.bx.psu.edu
-  
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -59,10 +47,9 @@ tools:
   owner: bgruening
   revisions:
   - 7e361d147872
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+#tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -70,21 +57,19 @@ tools:
   owner: bgruening
   revisions:
   - aac8444d6681
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
-  name: bedtools
-  owner: iuc
+  name: samtools_split
+  owner: devteam
   revisions:
-  - 44867b59dbf2
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  - b7f7826ef1cd
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -92,10 +77,9 @@ tools:
   owner: devteam
   revisions:
   - f7a0d41036c7
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -103,10 +87,9 @@ tools:
   owner: bgruening
   revisions:
   - f8fc4e5aff9d
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -114,10 +97,9 @@ tools:
   owner: devteam
   revisions:
   - fc288950c3b7
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -125,10 +107,19 @@ tools:
   owner: bgruening
   revisions:
   - f264afa9fa6f
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: macs2
+  owner: iuc
+  revisions:
+  - f5d67c722d67
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -136,10 +127,9 @@ tools:
   owner: devteam
   revisions:
   - 9129584416e2
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -149,7 +139,6 @@ tools:
   - 1865e693d8b2
   tool_panel_section_label: null
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -157,10 +146,9 @@ tools:
   owner: devteam
   revisions:
   - cc61ade70eb8
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -168,10 +156,9 @@ tools:
   owner: devteam
   revisions:
   - 71e5fa25b8a2
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -179,10 +166,9 @@ tools:
   owner: devteam
   revisions:
   - 583abf29fc8e
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -190,10 +176,19 @@ tools:
   owner: bgruening
   revisions:
   - 512155688d98
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: edger
+  owner: iuc
+  revisions:
+  - 9bdff28ae1b1
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -201,10 +196,9 @@ tools:
   owner: devteam
   revisions:
   - 12749212f61b
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -214,7 +208,6 @@ tools:
   - 9946bc39c834
   tool_panel_section_label: null
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -222,10 +215,9 @@ tools:
   owner: devteam
   revisions:
   - db000c6007a0
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -233,21 +225,19 @@ tools:
   owner: pjbriggs
   revisions:
   - 53af7b5b1b56
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
   name: removesnp
   owner: dktanwar
   revisions:
-  - c1951c420194
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  - cd9c123ab04f
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -255,10 +245,9 @@ tools:
   owner: bgruening
   revisions:
   - 81b1e3e1fc6c
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -266,10 +255,9 @@ tools:
   owner: bgruening
   revisions:
   - 94ca68515826
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -277,21 +265,29 @@ tools:
   owner: devteam
   revisions:
   - cab3f8d35989
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
   name: fastqc
   owner: devteam
   revisions:
-  - 9337dd1fbc66
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  - f2e8552cf1d0
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: deeptools_multi_bam_summary
+  owner: bgruening
+  revisions:
+  - 2d466b530754
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -301,18 +297,6 @@ tools:
   - 83da94c0e4a6
   tool_panel_section_label: null
   tool_shed_url: toolshed.g2.bx.psu.edu
-
-- install_repository_dependencies: true
-  install_resolver_dependencies: true
-  install_tool_dependencies: true
-  name: samtools_split
-  owner: devteam
-  revisions:
-  - b7f7826ef1cd
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
-  tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -320,10 +304,9 @@ tools:
   owner: bgruening
   revisions:
   - 38e3f226248b
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -331,21 +314,9 @@ tools:
   owner: devteam
   revisions:
   - 24c5d43cb545
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
-- install_repository_dependencies: true
-  install_resolver_dependencies: true
-  install_tool_dependencies: true
-  name: deeptools_multi_bam_summary
-  owner: bgruening
-  revisions:
-  - 2d466b530754
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
-  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
-  tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -353,10 +324,9 @@ tools:
   owner: bgruening
   revisions:
   - 5d11599b8a7d
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -364,10 +334,19 @@ tools:
   owner: devteam
   revisions:
   - a4a10c7924d1
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: limma_voom
+  owner: iuc
+  revisions:
+  - a330ddf43861
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -375,10 +354,9 @@ tools:
   owner: bgruening
   revisions:
   - 72bfafe3330b
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -388,7 +366,16 @@ tools:
   - b1bc53e9bbc5
   tool_panel_section_label: null
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: ucsc_twobittofa
+  owner: iuc
+  revisions:
+  - 4a81db403bd9
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -396,10 +383,19 @@ tools:
   owner: bgruening
   revisions:
   - bfff7454b59a
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
+- install_repository_dependencies: true
+  install_resolver_dependencies: true
+  install_tool_dependencies: true
+  name: bedtools
+  owner: iuc
+  revisions:
+  - 18aeac3cd1db
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
+  tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
+  tool_shed_url: toolshed.g2.bx.psu.edu
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -407,10 +403,9 @@ tools:
   owner: devteam
   revisions:
   - 33208952b99d
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -418,10 +413,9 @@ tools:
   owner: devteam
   revisions:
   - f57df915aa10
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -429,10 +423,9 @@ tools:
   owner: devteam
   revisions:
   - 8ccbdbe9a695
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -440,10 +433,9 @@ tools:
   owner: bgruening
   revisions:
   - fd1275e01605
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -451,10 +443,9 @@ tools:
   owner: bgruening
   revisions:
   - 29fcfd36e90a
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -462,10 +453,9 @@ tools:
   owner: bgruening
   revisions:
   - db940c262830
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -473,10 +463,9 @@ tools:
   owner: devteam
   revisions:
   - 88b8c2916784
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -484,10 +473,9 @@ tools:
   owner: bgruening
   revisions:
   - a02cfa31e9cb
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
-
 - install_repository_dependencies: true
   install_resolver_dependencies: true
   install_tool_dependencies: true
@@ -495,6 +483,6 @@ tools:
   owner: bgruening
   revisions:
   - a1ca9bccc7f2
-#  tool_panel_section_id: ngs_chip-seq_sperm_histones
+  #tool_panel_section_id: ngs_chip-seq_sperm_histones
   tool_panel_section_label: "NGS ChIP-Seq Sperm Histones"
   tool_shed_url: toolshed.g2.bx.psu.edu
